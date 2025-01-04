@@ -1,0 +1,10 @@
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+}
+.continue-link {
+  color: black;
+}

@@ -1,0 +1,64 @@
+<!-- <div class="card">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="start">
+      <img
+        src="assets/Images/photo.png"
+        routerLink="/home"
+        alt="Logo"
+        class="flex mr-3 logo"
+      />
+    </ng-template>
+    <button pButton pRipple label="SignUp" class="mr-2"></button>
+    <button
+      pButton
+      pRipple
+      label="Login"
+      class="p-button-success mr-2"
+      (click)="onLoginClick()"
+    ></button>
+  </p-menubar>
+</div> -->
+
+<div class="header-section">
+  <div class="container flex w-full">
+    <div class="flex w-8">
+      <a>
+        <img
+          [routerLink]="['/home']"
+          class="logo"
+          src="assets/Images/logo.png"
+        />
+      </a>
+      <ul class="menu-list">
+        <li *ngFor="let item of items">
+          <a [routerLink]="item.route">
+            <span class="material-symbols-outlined">{{ item.icon }}</span>
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="card flex flex-wrap justify-content-center gap-3 mr-5">
+      <p-iconField iconPosition="left">
+        <p-inputIcon styleClass="pi pi-search" />
+        <input
+          type="text"
+          [formControl]="searchInput"
+          pInputText
+          placeholder="Search Books"
+        />
+      </p-iconField>
+    </div>
+
+    <ul class="menu-list">
+      <li *ngFor="let item of account">
+        <a [routerLink]="item.route">
+          <span class="material-symbols-outlined">{{ item.icon }}</span>
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

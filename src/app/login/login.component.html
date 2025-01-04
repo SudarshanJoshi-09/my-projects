@@ -1,0 +1,37 @@
+<div class="login-wrap">
+  <div class="login-container">
+    <h2 style="text-align: center">Login</h2>
+    <form>
+      <div class="flex flex-column gap-2 username">
+        <label for="username">Username</label>
+        <input pInputText id="username" placeholder="Please enter username" />
+      </div>
+
+      <div class="flex flex-column gap-2 password">
+        <label for="username">Password</label>
+        <p-password [feedback]="false" placeholder="Please enter password" />
+        <!-- <div *ngIf="submitted && userLogin.get('pwd').errors">
+          <small
+            style="color: red"
+            *ngIf="userLogin.get('password').errors?.required"
+          >
+            Please Enter Password
+          </small>
+
+          <small
+            style="color: red"
+            *ngIf="userLogin.get('password').errors?.minlength"
+          >
+            Invalid password
+          </small>
+        </div> -->
+      </div>
+
+      <button class="login-btn">Continue</button>
+      <p class="signup-text">
+        Don’t have an account?
+        <a href="account/signup" class="signup-link">Signup</a>
+      </p>
+    </form>
+  </div>
+</div>

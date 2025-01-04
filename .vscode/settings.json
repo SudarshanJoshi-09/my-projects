@@ -1,0 +1,8 @@
+// "editor.quickSuggestions": {
+//   "other": true,
+//   "comments": true,
+//   "strings": true
+// },
+// "css.validate": true,
+// "css.lint.idSelector": "warning", 
+// "css.lint.unknownAtRules": "ignore"

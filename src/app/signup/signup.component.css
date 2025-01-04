@@ -1,0 +1,63 @@
+.login-wrap {
+  width: 100%;
+  background-image: url(../../assets/Images/output-onlinepngtools.png);
+  background-color: rgba(0, 0, 0, 0.075);
+
+  background-position: top center;
+  min-height: 80vh;
+  padding-top: 40px;
+}
+
+.login-wrap .login-container {
+  background: #ffffff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 500px;
+  margin: auto;
+  height: 480px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.login-btn {
+  background-color: #f97e26;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  border: 0;
+
+  padding: 0 1.5rem;
+  color: #ffffff;
+  border-radius: 4px;
+  height: 50px;
+  width: 100%;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+}
+
+.username {
+  margin-top: 20px;
+}
+.password {
+  margin-top: 20px;
+}
+.submit {
+  margin-top: 20px;
+}
+
+.signup-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}

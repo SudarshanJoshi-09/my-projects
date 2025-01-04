@@ -1,0 +1,54 @@
+<div class="category-header">
+  <ul class="category-list">
+    <li
+      *ngFor="let category of categories"
+      [ngClass]="{ 'active-category': category.value === activeCategory }"
+    >
+      <a (click)="onCategorySelect(category.value)">
+        <span>{{ category.label }}</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div
+  *ngIf="filteredProducts.length > 0; else noProducts"
+  class="product-list-row"
+>
+  <div class="product-item" *ngFor="let books of filteredProducts">
+    <div class="product-item-image">
+      <img [src]="books.img" [alt]="books.label" />
+    </div>
+    <div class="product-item-info">
+      <h3>{{ books.label }}</h3>
+      <p>{{ books.author }}</p>
+      <div class="flex flex-row">
+        <span
+          ><b>₹ {{ books.price }}</b></span
+        >
+        <del class="ml-2">₹ {{ books.originalPrice }}</del>
+      </div>
+      <div class="flex flex-row mt-3 w-full">
+        <p-rating
+          [ngModel]="books.ratings"
+          class="w-8"
+          [readonly]="true"
+          [cancel]="false"
+        ></p-rating>
+        <p-button
+          class="justify-content-end"
+          label="Add"
+          [rounded]="true"
+          severity="danger"
+          (click)="onAddProduct(books.label)"
+        ></p-button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noProducts>
+  <p style="text-align: center; margin-top: 100px">
+    No products available for this category.
+  </p>
+</ng-template>
