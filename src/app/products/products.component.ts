@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { ProductService } from './products.service';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
@@ -20,7 +20,11 @@ import { debounceTime } from 'rxjs';
   selector: 'app-products',
   standalone: true,
   imports: [
-    HttpClientModule,
+    
+// TODO: `HttpClientModule` should not be imported into a component directly.
+// Please refactor the code to add `provideHttpClient()` call to the provider list in the
+// application bootstrap logic and remove the `HttpClientModule` import from this component.
+HttpClientModule,
     DataViewModule,
     ButtonModule,
     CommonModule,
