@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
   items: any[] = [];
   account: any[] = [];
   searchInput: FormControl = new FormControl();
+  menuOpen: boolean = false;
 
   constructor(private router: Router, private search: SearchInputService) {}
   ngOnInit(): void {
@@ -55,5 +56,9 @@ export class AppComponent implements OnInit {
 
   onLoginClick() {
     this.router.navigate(['./login']);
+  }
+
+  toggleMenu() {
+    this.menuOpen = true;
   }
 }

@@ -11,13 +11,25 @@
   </ul>
 </div>
 
+<div class="card flex flex-wrap justify-content-end gap-3 mr-5 mt-4">
+  <p-iconField iconPosition="left">
+    <p-inputIcon styleClass="pi pi-search" />
+    <input
+      type="text"
+      [formControl]="searchInput"
+      pInputText
+      placeholder="Search Books"
+    />
+  </p-iconField>
+</div>
+
 <div
   *ngIf="filteredProducts.length > 0; else noProducts"
   class="product-list-row"
 >
   <div class="product-item" *ngFor="let books of filteredProducts">
     <div class="product-item-image">
-      <img [src]="books.img" [alt]="books.label" />
+      <img [src]="books.coverImage" [alt]="books.label" />
     </div>
     <div class="product-item-info">
       <h3>{{ books.label }}</h3>
@@ -38,14 +50,21 @@
         <p-button
           class="justify-content-end"
           label="Add"
+          icon="pi pi-shopping-cart"
           [rounded]="true"
           severity="danger"
-          (click)="onAddProduct(books.label)"
+          (click)="onAddProduct(books)"
         ></p-button>
       </div>
     </div>
   </div>
 </div>
+
+<p-sidebar [(visible)]="sidebarVisible2" position="right">
+  <h3>Shopping Cart</h3>
+  <!-- <p>{{ selectedProduct?.label }} has been added to your cart!</p> -->
+  <button pButton type="button" label="Close" class="p-button-text"></button>
+</p-sidebar>
 
 <ng-template #noProducts>
   <p style="text-align: center; margin-top: 100px">

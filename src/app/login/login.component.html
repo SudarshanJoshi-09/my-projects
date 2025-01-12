@@ -8,8 +8,14 @@
       </div>
 
       <div class="flex flex-column gap-2 password">
-        <label for="username">Password</label>
-        <p-password [feedback]="false" placeholder="Please enter password" />
+        <label for="password">Password</label>
+
+        <p-password
+          placeholder="Please enter password"
+          [feedback]="true"
+          [toggleMask]="true"
+        />
+
         <!-- <div *ngIf="submitted && userLogin.get('pwd').errors">
           <small
             style="color: red"
@@ -25,9 +31,14 @@
             Invalid password
           </small>
         </div> -->
+
+        <p class="password-forgot">
+          Forgot Password?
+          <a href="account/signup" class="signup-link">Reset password</a>
+        </p>
       </div>
 
-      <button class="login-btn">Continue</button>
+      <button class="login-btn" (click)="onLogin()">Continue</button>
       <p class="signup-text">
         Don’t have an account?
         <a href="account/signup" class="signup-link">Signup</a>

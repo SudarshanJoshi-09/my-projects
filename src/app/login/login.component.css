@@ -2,7 +2,6 @@
   width: 100%;
   background-image: url(../../assets/Images/output-onlinepngtools.png);
   background-color: rgba(0, 0, 0, 0.075);
-
   background-position: top center;
   min-height: 80vh;
   padding-top: 40px;
@@ -14,19 +13,37 @@
   border-radius: 8px;
   width: 500px;
   margin: auto;
-  height: 400px;
+  height: 430px;
   padding: 20px;
   margin-bottom: 20px;
   margin-top: 80px;
 }
 
+.username,
+.password {
+  margin-top: 20px;
+}
+
+.p-inputtext {
+  font-family: var(--font-family);
+  font-feature-settings: var(--font-feature-settings, normal);
+  font-size: 1rem;
+  color: #4b5563;
+  background: #ffffff;
+  padding: 0.75rem 0.75rem;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+  appearance: none;
+  border-radius: 6px;
+  width: 460px !important;
+}
+
 .login-btn {
   background-color: #3b892b;
   font-weight: 600;
-
   text-transform: uppercase;
   border: 0;
-
   padding: 0 1.5rem;
   color: #ffffff;
   border-radius: 4px;
@@ -35,22 +52,21 @@
   appearance: none;
   cursor: pointer;
   outline: none;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.username {
-  margin-top: 20px;
-}
-.password {
-  margin-top: 20px;
-}
-.submit {
-  margin-top: 20px;
+.login-btn:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .signup-text {
+  margin-top: 30px;
+  font-size: 14px;
+}
+.password-forgot {
   margin-top: 15px;
   font-size: 14px;
+  text-align: end;
 }
 
 .signup-link {
@@ -60,4 +76,8 @@
 
 .signup-link:hover {
   text-decoration: underline;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }

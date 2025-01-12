@@ -4,17 +4,25 @@
     <form>
       <div class="flex flex-column gap-2 username">
         <label for="username">Email ID</label>
-        <input pInputText id="username" aria-describedby="username-help" />
+        <input
+          placeholder="Please enter Email ID"
+          pInputText
+          id="username"
+          aria-describedby="username-help"
+        />
       </div>
 
       <div class="flex flex-column gap-2 password">
         <label for="username">Password</label>
-        <input pInputText id="username" aria-describedby="username-help" />
+        <p-password placeholder="Please enter password" [toggleMask]="true" />
       </div>
 
       <div class="flex flex-column gap-2 password">
         <label for="username">Confirm Password</label>
-        <input pInputText id="username" aria-describedby="username-help" />
+        <p-password
+          placeholder="Please enter confirm password"
+          [toggleMask]="true"
+        />
       </div>
 
       <button class="login-btn">Continue</button>

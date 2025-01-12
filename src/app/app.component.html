@@ -19,38 +19,55 @@
   </p-menubar>
 </div> -->
 
-<div class="header-section">
-  <div class="container flex w-full">
-    <div class="flex w-8">
+<!-- <div class="header-section">
+  <div class="container">
+    <ul class="menu-list-left">
       <a>
         <img
           [routerLink]="['/home']"
           class="logo"
           src="assets/Images/logo.png"
+          alt="Logo"
         />
       </a>
-      <ul class="menu-list">
-        <li *ngFor="let item of items">
-          <a [routerLink]="item.route">
-            <span class="material-symbols-outlined">{{ item.icon }}</span>
-            {{ item.label }}
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="card flex flex-wrap justify-content-center gap-3 mr-5">
-      <p-iconField iconPosition="left">
-        <p-inputIcon styleClass="pi pi-search" />
-        <input
-          type="text"
-          [formControl]="searchInput"
-          pInputText
-          placeholder="Search Books"
-        />
-      </p-iconField>
-    </div>
+      <li *ngFor="let item of items">
+        <a [routerLink]="item.route">
+          <span class="material-symbols-outlined">{{ item.icon }}</span>
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
 
-    <ul class="menu-list">
+    <ul class="menu-list-right">
+      <li *ngFor="let item of account">
+        <a [routerLink]="item.route">
+          <span class="material-symbols-outlined">{{ item.icon }}</span>
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> -->
+
+<div class="header-section">
+  <div class="container">
+    <a>
+      <img
+        [routerLink]="['/home']"
+        class="logo"
+        src="assets/Images/logo.png"
+        alt="Logo"
+      />
+    </a>
+    <ul class="menu-list-left">
+      <li *ngFor="let item of items">
+        <a [routerLink]="item.route">
+          <span class="material-symbols-outlined">{{ item.icon }}</span>
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+    <ul class="menu-list-right">
       <li *ngFor="let item of account">
         <a [routerLink]="item.route">
           <span class="material-symbols-outlined">{{ item.icon }}</span>
@@ -61,4 +78,39 @@
   </div>
 </div>
 
+<!-- <div class="header-section">
+  <div class="container">
+    <a>
+      <img
+        [routerLink]="['/home']"
+        class="logo"
+        src="assets/Images/logo.png"
+        alt="Logo"
+      />
+    </a>
+    <button class="hamburger" (click)="toggleMenu()">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <ul *ngIf="menuOpen" class="dropdown-menu">
+    <li><a [routerLink]="'/home'">Home</a></li>
+    <li><a [routerLink]="'/about'">About</a></li>
+    <li><a [routerLink]="'/services'">Services</a></li>
+    <li><a [routerLink]="'/contact'">Contact</a></li>
+  </ul>
+</div> -->
+
 <router-outlet></router-outlet>
+
+<!-- <div class="card flex flex-wrap justify-content-center gap-3 mr-5">
+      <p-iconField iconPosition="left">
+        <p-inputIcon styleClass="pi pi-search" />
+        <input
+          type="text"
+          [formControl]="searchInput"
+          pInputText
+          placeholder="Search Books"
+        />
+      </p-iconField>
+    </div> -->

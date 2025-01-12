@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
   navigate: any;
-  // private apiUrl = 'http://localhost:3000/products'; // URL to the backend
-  // constructor(private http: HttpClient) {}
-  // getProducts(): Observable<Product[]> {
-  //   debugger;
-  //   return this.http.get<Product[]>(this.apiUrl); // Make GET request to fetch data
-  // }
+  private apiUrl = 'http://localhost:3000/products'; // URL to the backend
+  constructor(private http: HttpClient) {}
+  getProducts(): Observable<any> {
+    debugger;
+    return this.http.get<any>(this.apiUrl); // Make GET request to fetch data
+  }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
@@ -25,9 +26,11 @@ import { PasswordModule } from 'primeng/password';
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class LoginComponent implements OnInit {
   // userLogin!: FormGroup;
+  value!: string;
 
   constructor(private fb: FormBuilder, private router: Router) {
     // Define form structure and validation
@@ -44,8 +47,7 @@ export class LoginComponent implements OnInit {
     // });
   }
 
-  // onLogin() {
-  //   console.log(this.userLogin);
-  //   this.router.navigate(['./products']);
-  // }
+  onLogin() {
+    // this.router.navigate(['./products']);
+  }
 }
